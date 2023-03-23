@@ -3,9 +3,15 @@ package com.day8;
 import java.util.Scanner;
 
 public class NumberGame {
-	public static String game(int a) {
+	public static int rnd() {
 		int answer=(int)(Math.random()*100+1);
-		
+		return answer;		
+	}
+	
+	//특정 숫자 사이의 임의의 값을 구하는 메서드
+	public	static int rnd2(int a, int b) { // 
+		int answer=(int)(Math.random()*(b-a+1)+a);
+		return answer;
 	}
 
 	public static void main(String[] args) {
@@ -41,23 +47,24 @@ public class NumberGame {
 		//1. 1~100사이의 임의의 값을 구한다 - 정답
 		
 		//int answer=(int)(Math.random()*100+1);
-		int answer=50;
+		
 		Scanner sc = new Scanner (System.in);
-		//2. 4번 반복처리
-		for(int i=0; i<4; i++) {
+		int answer=rnd();
+		
+		for(int i=0; i<4; i++) {	//2. 4번 반복처리
 			//2.1 사용자로 부터 숫자 입력받기
 			System.out.println("숫자를 입력하세요");
 			int num=sc.nextInt();
 			
 			//2.2 정답과 사용자값 비교
 			String result="";
-			if(i==3 && num!=answer) {
-				System.out.println("실패 !!! 정답은 " + answer);
+			if(num==answer) {
+				result="정답입니다";
 				break;
 			}
-			if(num==answer) {
-				System.out.println("정답입니다");
-				break;
+			
+			if(i==3) {
+				result="실패 !!! 정답은 " + answer;
 			}else if(num>answer) {
 				result="너무 큽니다. 조금 더 작은 수를 입력하세요\n";
 			}else{
@@ -68,7 +75,12 @@ public class NumberGame {
 			//2.3 결과 출력
 			System.out.println(result);
 		}//for
-
+		
+		System.out.println("숫자를 입력하세요");
+		int num1=sc.nextInt();
+		int num2=sc.nextInt();
+		int rnd2=rnd2(num1, num2);
+		
 	}
 
 }
