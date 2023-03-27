@@ -1,6 +1,6 @@
-package com.day10;
+package com.day11;
 
-public class SeasonArray {
+public class SeasonArray1 {
 
 	public static void main(String[] args) {
 		String[] season = new String[4];
@@ -39,15 +39,20 @@ public class SeasonArray {
 		dArr[2][0] = 2*2+0; = 4
 		dArr[2][1] = 2*2+1; = 5
 		*/
-		int[] Arr = new int[5];
+		double [] dArr2 = new double[dArr.length * dArr[0].length];	
 		
 		for(int i=0; i<dArr.length; i++) {
-			for(int j=0; j<dArr[j].length; j++) {
+			for(int j=0; j<dArr[i].length; j++) {
 				
-				Arr[i] = (i * dArr[j]) + dArr[i];
+				dArr2[(dArr[i].length * i) + j] = dArr[i][j];
+				
 			}
+			
 		}
-
+		sum=0;
+		for(double n : dArr2) {
+			System.out.println("dArr2["+ sum++ +"] = " + n);
+		}
 	}
 
 }
