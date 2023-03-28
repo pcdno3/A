@@ -37,6 +37,7 @@ public class CalculatorMain {
 		double a=sc.nextDouble();
 		double b=sc.nextDouble();
 		String result="";
+		
 		double plus = cal.plus(a, b);
 		double minus = cal.minus(a, b);
 		double multiply = cal.multiply(a, b);

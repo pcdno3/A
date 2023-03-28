@@ -29,10 +29,9 @@ public class RectangleMain {
 		rec.width = width;
 		
 		int area = rec.findArea();
-		int round = rec.findRound();
 		
 		System.out.println("사각형의 넓이 : " + area);
-		System.out.println("사각형의 둘레 : " + round);
+		System.out.println("사각형의 둘레 : " + rec.findRound());
 		
 		
 
