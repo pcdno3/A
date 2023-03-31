@@ -80,6 +80,11 @@ public class StudentMain {
 			System.out.println("\n============================");
 		}
 		
+		for(Student s : stu3) {
+			s.showInfo();
+			System.out.println("\n============================");
+		}
+		
 		
 	
 
