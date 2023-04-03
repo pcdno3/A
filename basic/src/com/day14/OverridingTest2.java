@@ -31,11 +31,12 @@ class Rectangle{
 public class OverridingTest2 {
 
 	public static void main(String[] args) {
+		
 		Rectangle rec = new Rectangle();
-		System.out.println(rec.findArea(10, 20));
+		System.out.println("사각형의 면적 : " + rec.findArea(10, 20));
 		
 		Circle cir = new Circle();
-		System.out.println(cir.findArea(10, 0));
+		System.out.println("원의 면적 : " + cir.findArea(10, 0));
 		
 		
 		
